@@ -16,7 +16,7 @@ This project adds Cursor editor options to the Windows context menu for files, f
 
 1. **Modify Configuration**: Open the `.reg` file you want to use and replace all `<YourUsername>` with your Windows username
 2. **English**: Double-click the modified `install-open-with-cursor.reg`
-3. **Chinese**: Double-click the modified `install-open-with-cursor-zh.reg`
+3. **Chinese**: Double-click the modified `install-open-with-cursor-zh.reg` (UTF-16 LE encoded)
 4. Click "Yes" when Windows asks for confirmation
 5. Restart File Explorer or log out and back in
 
@@ -31,7 +31,7 @@ This project adds Cursor editor options to the Windows context menu for files, f
 ## Files
 
 - `install-open-with-cursor.reg` - Install script (English)
-- `install-open-with-cursor-zh.reg` - Install script (Chinese)
+- `install-open-with-cursor-zh.reg` - Install script (Chinese, UTF-16 LE encoded)
 - `uninstall-open-with-cursor.reg` - Uninstall script (works for both languages)
 
 ## Manual Installation Steps
@@ -64,4 +64,3 @@ Special thanks to [Ryan Johnson](https://github.com/AMDphreak) for his original 
 Jing Wang - wangjing@xynu.edu.cn
 
 Project Link: https://github.com/yuzhounh/Open-with-Cursor-by-reg
-

@@ -6,7 +6,7 @@
 
 最简单的方法是使用提供的 `.reg` 文件：
 
-1. **修改配置**：打开 `install-open-with-cursor-zh.reg` 文件，将所有 `<YourUsername>` 替换为您的Windows用户名
+1. **修改配置**：打开 `install-open-with-cursor-zh.reg` 文件（UTF-16 LE编码），将所有 `<YourUsername>` 替换为您的Windows用户名
 2. **安装**：双击修改后的 `install-open-with-cursor-zh.reg`，在提示时点击"是"
 3. **卸载**：双击 `uninstall-open-with-cursor.reg`，在提示时点击"是"
 4. 重启文件资源管理器或重新登录以使更改生效
@@ -21,6 +21,7 @@
 - `.reg` 文件使用 `%LOCALAPPDATA%` 环境变量，Windows会自动将其展开为您的用户AppData文件夹。
 - 如遇问题，可以删除添加的注册表项或使用卸载 `.reg` 文件来撤销更改。
 - 本指南使用 `HKEY_CURRENT_USER` 而非 `HKEY_CLASSES_ROOT`，这意味着更改是用户特定的，不需要管理员权限。
+- 中文 `.reg` 文件（`*-zh.reg`）必须使用 UTF-16 LE 编码，否则中文字符可能显示为乱码。
 
 ### 为文件添加右键菜单选项
 
