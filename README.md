@@ -1,4 +1,6 @@
-# Open with Cursor - Context Menu Integration
+# Open with Cursor via Registry Files
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-D4A017.svg)](LICENSE)
 
 This project adds Cursor editor options to the Windows context menu for files, folders, and folder backgrounds by modifying the Windows registry.
 
@@ -8,17 +10,20 @@ This project adds Cursor editor options to the Windows context menu for files, f
 - Adds "通过 Cursor 打开" option for Chinese language users
 - No administrator privileges required
 - User-specific installation (affects only current user)
-- Works on work laptops and corporate environments
+- Uses current-user registry entries; availability on managed devices depends on local policies
 
 ## Usage
 
 ### Quick Installation (Recommended)
 
-1. **Modify Configuration**: Open the `.reg` file you want to use and replace all `<YourUsername>` with your Windows username
-2. **English**: Double-click the modified `install-open-with-cursor.reg`
-3. **Chinese**: Double-click the modified `install-open-with-cursor-zh.reg` (UTF-16 LE encoded)
-4. Click "Yes" when Windows asks for confirmation
-5. Restart File Explorer or log out and back in
+Requires Windows with Cursor already installed. Download or clone this repository, then choose one menu language:
+
+1. **Modify Configuration**: Open the `.reg` file you want to use and replace all `<YourUsername>` with your Windows profile folder name. If Cursor uses a custom installation location, replace every executable path with its actual path, preserving the doubled backslashes in the `.reg` file.
+2. **Install one variant**:
+   - **English**: Double-click the modified `install-open-with-cursor.reg`
+   - **Chinese**: Double-click the modified `install-open-with-cursor-zh.reg` (UTF-16 LE encoded)
+3. Click "Yes" when Windows asks for confirmation
+4. Restart File Explorer or log out and back in
 
 ### Uninstallation
 
@@ -43,7 +48,9 @@ If you prefer to manually edit the registry:
 
 ## Related Projects
 
-- [Open-with-Cursor](https://github.com/yuzhounh/Open-with-Cursor) - Add Cursor editor options to the Windows context menu for files, folders, and folder backgrounds.
+- [Open-with-Cursor](https://github.com/yuzhounh/Open-with-Cursor) - The Python/EXE alternative for Cursor, which writes to `HKEY_CLASSES_ROOT` and requests administrator privileges.
+
+- [Open-with-Antigravity](https://github.com/yuzhounh/Open-with-Antigravity) - A separate context-menu tool for the Antigravity editor, with multiple per-user installation methods.
 
 - [Open with Cursor in Context Menu](https://github.com/Puliczek/open-with-cursor-context-menu) - A similar project that uses PowerShell scripts to achieve similar functionality.
 
@@ -53,7 +60,7 @@ If you prefer to manually edit the registry:
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0). See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
