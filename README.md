@@ -1,6 +1,16 @@
-# Open with Cursor via Registry Files
+# Open with Cursor (Registry)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-D4A017.svg)](LICENSE)
+> Add Cursor to the Windows context menu with per-user registry files.
+
+<p>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-f59e0b?style=flat" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/Platform-Windows-0078d4?style=flat" alt="Platform: Windows">
+  <img src="https://img.shields.io/badge/Registry-Per%20user-5391fe?style=flat" alt="Registry: Per user">
+</p>
+
+<p>
+  <a href="#usage">Get started</a> · <a href="LICENSE">License</a> · <a href="README_zh-CN.md">中文说明</a>
+</p>
 
 This project adds Cursor editor options to the Windows context menu for files, folders, and folder backgrounds by modifying the Windows registry.
 
